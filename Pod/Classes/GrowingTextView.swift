@@ -128,11 +128,7 @@ open class GrowingTextView: UITextView {
     
     private func scrollToCorrectPosition() {
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) {
-            if self.isFirstResponder {
-                self.scrollRangeToVisible(NSMakeRange(-1, 0)) // Scroll to bottom
-            } else {
-                self.scrollRangeToVisible(NSMakeRange(0, 0)) // Scroll to top
-            }
+            self.scrollRangeToVisible(NSMakeRange(0, 0)) // Scroll to top
         }
     }
     
