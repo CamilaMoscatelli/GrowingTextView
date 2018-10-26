@@ -57,8 +57,8 @@ open class GrowingTextView: UITextView {
     private func commonInit() {
         contentMode = .redraw
         associateConstraints()
-        NotificationCenter.default.addObserver(self, selector: #selector(textDidChange), name: UITextView.textDidChangeNotification, object: self)
-        NotificationCenter.default.addObserver(self, selector: #selector(textDidEndEditing), name: UITextView.textDidEndEditingNotification, object: self)
+        NotificationCenter.default.addObserver(self, selector: #selector(textDidChange), name: .UITextViewTextDidChange, object: self)
+        NotificationCenter.default.addObserver(self, selector: #selector(textDidEndEditing), name: .UITextViewTextDidEndEditing, object: self)
     }
     
     deinit {
@@ -66,7 +66,7 @@ open class GrowingTextView: UITextView {
     }
     
     open override var intrinsicContentSize: CGSize {
-        return CGSize(width: UIView.noIntrinsicMetric, height: 30)
+       return CGSize(width: UIViewNoIntrinsicMetric, height: 30)
     }
     
     private func associateConstraints() {
@@ -128,11 +128,7 @@ open class GrowingTextView: UITextView {
     }
     
     private func scrollToCorrectPosition() {
-        if self.isFirstResponder {
-            self.scrollRangeToVisible(NSMakeRange(-1, 0)) // Scroll to bottom
-        } else {
-            self.scrollRangeToVisible(NSMakeRange(0, 0)) // Scroll to top
-        }
+        self.scrollRangeToVisible(NSMakeRange(0, 0)) // Scroll to top
     }
     
     // Show placeholder if needed
