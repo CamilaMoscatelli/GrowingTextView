@@ -4,8 +4,7 @@
 [![License](https://img.shields.io/cocoapods/l/GrowingTextView.svg?style=flat)](http://cocoapods.org/pods/GrowingTextView)
 [![Platform](https://img.shields.io/cocoapods/p/GrowingTextView.svg?style=flat)](http://cocoapods.org/pods/GrowingTextView)
 [![Language](https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat)](http://cocoapods.org/pods/GrowingTextView)
-[![Language](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat)](http://cocoapods.org/pods/GrowingTextView)
-[![Language](https://img.shields.io/badge/Swift-4.2-orange.svg?style=flat)](http://cocoapods.org/pods/GrowingTextView)
+[![Language](https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat)](http://cocoapods.org/pods/GrowingTextView)
 
 <img src="DEMO.gif" border=1 style="border-color:#eeeeee">
 
